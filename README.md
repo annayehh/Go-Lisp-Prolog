@@ -122,4 +122,57 @@ libXpm-devel \
 libXrender-devel \
 libXt-devel \
 ncurses-devel \
+openssl-devel \
+pkgconfig \
+readline-devel \
+libedit-devel \
+unixODBC-devel \
+zlib-devel \
+uuid-devel \
+libarchive-devel \
+libyaml-devel
+```
+6. For Debian-based Linux, install prerequisites following https://www.swi-prolog.org/build/Debian.html
+```
+sudo apt-get update
+sudo apt-get install \
+build-essential cmake ninja-build pkg-config \
+ncurses-dev libreadline-dev libedit-dev \
+libgoogle-perftools-dev \
+libunwind-dev \
+libgmp-dev \
+libssl-dev \
+unixodbc-dev \
+zlib1g-dev libarchive-dev \
+libossp-uuid-dev \
+libxext-dev libice-dev libjpeg-dev libxinerama-dev libxft-dev \
+libxpm-dev libxt-dev \
+libdb-dev \
+libpcre3-dev \
+libyaml-dev \
+default-jdk junit
+```
+7. It seems that the latest version of SWI-Prolog is using cmake (https://www.swi-prolog.org/build/unix.html), but not for SWI-Prolog 7.6.4)
+8. Go to https://www.swi-prolog.org/download/stable?show=all
+9. Search for “7.6.4”, then you can find and download SWI-Prolog source for 7.6.4
+10. Execute the following
+```
+$ tar xvf swipl-7.6.4.tar.gz
+...
+$ cd swipl-7.6.4/
+$ ./configure
+$ make
+...
+$ sudo make install
+...
+$ # Now we need to install plunit, or we cannot run test cases
+$ cd packages
+$ ./configure
+...
+$ make
+...
+$ sudo make install
+...
+$ swipl --version
+SWI-Prolog version 7.6.4 for x86_64-linux
 ```
