@@ -27,3 +27,5 @@ please install Go, lisp and prolog before running code
 4. After install, there should be “SWI-Prolog” in Start menu.
 5. You should be able to open a “.pl” file using SWI-Prolog. The title bar should show “SWI-Prolog (..., version 7.6.4)”.
 6. Open cmd, then type "C:\Program Files\swipl\bin\swipl.exe" --version, and you should see something like “SWI-Prolog version 7.6.4 for x64-win64”
+
+## macOS
