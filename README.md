@@ -51,3 +51,26 @@ please install Go, lisp and prolog before running code
 3. Download executable and install.
 4. Add the following line to your ∼/.zshrc file: export PATH=$PATH:/Applications/SWI-Prolog.app/Contents/MacOS
 5. Open a terminal and type swipl --version, and you should see something like “SWI-Prolog version 7.6.4 ...”
+
+## Linux
+### Go for Linux
+• You need around 250 MiB free disk space to install
+• Go to https://golang.org/dl/
+• Scroll down and expand “Archived versions”
+• Expand “go1.17.4”
+• Download go1.17.4.linux-amd64.tar.gz
+• Extract the archive to /usr/local
+$ ls go1.17.4.linux-amd64.tar.gz
+go1.17.4.linux-amd64.tar.gz
+$ pwd=$PWD
+$ cd /usr/local
+$ sudo tar xvf "$pwd/go1.17.4.linux-amd64.tar.gz"
+...
+$ /usr/local/go/bin/go version
+go version go1.17.4 linux/amd64
+• You should add /usr/local/go/bin to your PATH.
+$ echo 'PATH=/usr/local/go/bin:$PATH' >> ∼/.bashrc
+$ echo 'PATH=/usr/local/go/bin:$PATH' >> ∼/.bash_profile
+$ exec bash
+$ go version
+go version go1.17.4 linux/amd64
