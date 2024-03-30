@@ -54,12 +54,13 @@ please install Go, lisp and prolog before running code
 
 ## Linux
 ### Go for Linux
-• You need around 250 MiB free disk space to install
-• Go to https://golang.org/dl/
-• Scroll down and expand “Archived versions”
-• Expand “go1.17.4”
-• Download go1.17.4.linux-amd64.tar.gz
-• Extract the archive to /usr/local
+1. You need around 250 MiB free disk space to install
+2. Go to https://golang.org/dl/
+3. Scroll down and expand “Archived versions”
+4. Expand “go1.17.4”
+5. Download go1.17.4.linux-amd64.tar.gz
+6. Extract the archive to /usr/local
+```
 $ ls go1.17.4.linux-amd64.tar.gz
 go1.17.4.linux-amd64.tar.gz
 $ pwd=$PWD
@@ -68,9 +69,12 @@ $ sudo tar xvf "$pwd/go1.17.4.linux-amd64.tar.gz"
 ...
 $ /usr/local/go/bin/go version
 go version go1.17.4 linux/amd64
-• You should add /usr/local/go/bin to your PATH.
+```
+7. You should add /usr/local/go/bin to your PATH.
+```
 $ echo 'PATH=/usr/local/go/bin:$PATH' >> ∼/.bashrc
 $ echo 'PATH=/usr/local/go/bin:$PATH' >> ∼/.bash_profile
 $ exec bash
 $ go version
 go version go1.17.4 linux/amd64
+```
