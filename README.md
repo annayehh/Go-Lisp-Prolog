@@ -78,3 +78,48 @@ $ exec bash
 $ go version
 go version go1.17.4 linux/amd64
 ```
+### LISP for Linux
+1. In https://clisp.sourceforge.io/, see “Linux packages” in “Get CLISP”.
+2. For RPM-based Linux, the following command installs the correct version of CLISP: sudo yum install "clisp-2.49.*"
+3. For Debian-based Linux, the following command should be able to install the correct version of CLISP (though not tested):
+```
+sudo apt-get update
+sudo apt-get install clisp
+```
+4. For Debian-based Linux, also try: https://unix.stackexchange.com/a/487556
+
+### SWI-Prolog for Linux
+1. On Ubuntu (≥ 18.04), you can install SWI-Prolog 7.6.4 using following command:
+```
+sudo apt-get update
+sudo apt-get install swi-prolog
+```
+2. For other distributions it is possible to build from source: https://www.swi-prolog.org/build/unixautotools.txt
+3. Reference: http://www.codecompiling.net/node/137
+4. You need around 500 MiB free disk space to install
+5. For RPM-based Linux, install prerequisites following https://www.swi-prolog.org/
+```
+build/Redhat.html
+sudo dnf install \
+cmake \
+ninja-build \
+libunwind \
+gperftools-devel \
+freetype-devel \
+gmp-devel \
+java-1.8.0-openjdk-devel \
+jpackage-utils \
+libICE-devel \
+libjpeg-turbo-devel \
+libSM-devel \
+libX11-devel \
+libXaw-devel \
+libXext-devel \
+libXft-devel \
+libXinerama-devel \
+libXmu-devel \
+libXpm-devel \
+libXrender-devel \
+libXt-devel \
+ncurses-devel \
+```
